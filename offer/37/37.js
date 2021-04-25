@@ -1,16 +1,23 @@
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
 var serialize = function (root) {
     if (!root) return '';
     let q = [root];
     let res = []
 
     while (q.length) {
-        let node = q.splice(0, 1)
-        console.log(node)
-        node.left && node.push(node.left)
-        node.right && node.push(node.right)
-        res.push(node.val)
+        let node = q.shift();
+        if (node){
+            q.push(node.left)
+            q.push(node.right)
+            res.push(node.val)
+        }else {
+            res.push('null')
+        }
     }
-    console.log(res.join(","))
     return res.join(",")
 };
 
@@ -21,7 +28,30 @@ var serialize = function (root) {
  * @return {TreeNode}
  */
 var deserialize = function (data) {
-    console.log(data)
+    if (data==='') return null
+    let nodeVal = data.split(",").map(val => {
+        let v = parseInt(val)
+        return isNaN(v) ? null : v
+    });
+    let i = 1
+    let root = new TreeNode(nodeVal[0]);
+    let q = [root]
+
+    while (q.length) {
+        let node = q.shift();
+        if (nodeVal[i] !== null) {
+            node.left = new TreeNode(nodeVal[i]);
+            q.push(node.left)
+        }
+        i++;
+        if (nodeVal[i] !== null) {
+            node.right = new TreeNode(nodeVal[i]);
+            q.push(node.right)
+        }
+        i++;
+    }
+
+    return root
 };
 
-console.log(deserialize("[1,2,3,null,null,4,5]"))
+console.log(serialize(deserialize("1,2,3,null,null,4,5")))

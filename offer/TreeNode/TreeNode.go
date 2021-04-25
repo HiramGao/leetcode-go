@@ -33,3 +33,22 @@ func BuildTreeNode(source []int) *TreeNode {
 
 	return *root
 }
+
+func PrintTree(root *TreeNode) {
+	var dfs func(node *TreeNode)
+
+	dfs = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+
+		if node.Left != nil {
+			dfs(node.Left)
+		}
+		println(node.Val)
+		if node.Right != nil {
+			dfs(node.Right)
+		}
+	}
+	dfs(root)
+}
