@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../ListNode"
+	. "../../ListNode"
 )
 //
 //func deleteNode(head *ListNode, val int) *ListNode {

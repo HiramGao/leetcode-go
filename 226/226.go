@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../offer/TreeNode"
+	. "../TreeNode"
 )
 
 func invertTree(root *TreeNode) *TreeNode {

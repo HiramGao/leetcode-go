@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../TreeNode"
+	. "../../TreeNode"
 )
 
 func lowestCommonAncestor1(root *TreeNode, p *TreeNode, q *TreeNode) *TreeNode {

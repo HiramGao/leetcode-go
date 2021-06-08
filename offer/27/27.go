@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../TreeNode"
+	. "../../TreeNode"
 )
 
 func mirrorTree(root *TreeNode) *TreeNode {

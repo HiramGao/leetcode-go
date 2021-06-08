@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../ListNode"
+	. "../../ListNode"
 )
 
 //func reverseList(head *ListNode) *ListNode {

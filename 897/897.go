@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../offer/TreeNode"
+	. "../TreeNode"
 )
 
 func increasingBST(root *TreeNode) *TreeNode {

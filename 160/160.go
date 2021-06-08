@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../offer/ListNode"
+	. "../ListNode"
 )
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {

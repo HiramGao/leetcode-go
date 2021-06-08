@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../TreeNode"
+	. "../../TreeNode"
 )
 
 func isSubStructure(A *TreeNode, B *TreeNode) bool {

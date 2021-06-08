@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../ListNode"
+	. "../../ListNode"
 )
 
 func getKthFromEnd(head *ListNode, k int) *ListNode {

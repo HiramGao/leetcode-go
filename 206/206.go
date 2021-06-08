@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "../offer/ListNode"
+	. "../ListNode"
 )
 
 func reverseList1(head *ListNode) *ListNode {
